@@ -1,0 +1,55 @@
+{
+  "title": "AI Agents for Sales Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "maxResults": {
+      "title": "Max Results",
+      "type": "integer",
+      "description": "Maximum number of tools to return across all sources.",
+      "default": 25,
+      "minimum": 1,
+      "maximum": 200,
+      "editor": "number"
+    },
+    "minRating": {
+      "title": "Minimum Rating",
+      "type": "number",
+      "description": "Only include tools with an average rating at or above this value (0–5).",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 5,
+      "editor": "number"
+    },
+    "salesTasks": {
+      "title": "Sales Tasks Filter",
+      "type": "array",
+      "description": "Only return tools that cover at least one of these sales tasks. Leave empty to return all.",
+      "default": [],
+      "items": {
+        "type": "string",
+        "enum": ["prospecting", "outreach", "coaching", "forecasting"]
+      },
+      "editor": "stringList"
+    },
+    "pricingModel": {
+      "title": "Pricing Model",
+      "type": "string",
+      "description": "Filter by pricing model. Choose 'all' to skip filtering.",
+      "default": "all",
+      "enum": ["all", "free", "freemium", "paid", "enterprise"],
+      "editor": "select"
+    },
+    "sources": {
+      "title": "Sources",
+      "type": "array",
+      "description": "Which directories to scrape. Remove a source to skip it.",
+      "default": ["g2", "capterra", "producthunt"],
+      "items": {
+        "type": "string",
+        "enum": ["g2", "capterra", "producthunt"]
+      },
+      "editor": "stringList"
+    }
+  }
+}
