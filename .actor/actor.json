@@ -1,8 +1,10 @@
 {
   "actorSpecification": 1,
   "name": "ai-agents-for-sales",
-  "title": "AI Sales Agent Finder — G2, Capterra & ProductHunt",
-  "description": "Find and compare AI sales agents. Scrapes G2, Capterra, Product Hunt. Returns pricing, ratings, integrations, and sales task coverage in structured JSON.",
+  "title": "Ai Agents For Sales",
+  "description": "Discover top AI sales tools. Scrapes Futurepedia, TopAI & TrustRadius. Returns structured JSON. | Built by RemoteLama \u2014 remotelama.com",
   "version": "0.1",
-  "meta": { "templateId": "ts-cheerio" }
+  "meta": {
+    "templateId": "ts-cheerio"
+  }
 }
